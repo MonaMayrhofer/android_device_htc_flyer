@@ -1,5 +1,5 @@
 #
-# system.prop for glacier
+# system.prop for flyer
 #
 ro.sf.lcd_density=240
 
@@ -13,14 +13,15 @@ rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
 rilswitch.ganlibpath=/system/lib/libganril.so
 
 ro.ril.enable.a53=1
-ro.ril.enable.dtm=1
+ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
-ro.ril.hsdpa.category=8
+ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=2
 ro.ril.def.agps.mode=2
 ro.ril.def.agps.feature=1
-ro.ril.disable.fd.plmn.prefix=23402,23410,23411
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
+
 ro.ril.enable.sdr=0
 ro.ril.enable.gea3=0
 
@@ -40,7 +41,7 @@ mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 ro.opengles.version = 131072
 
 # This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=32m
+dalvik.vm.heapsize=256m
 
 # For the default value of agps
 ro.ril.def.agps.mode = 2

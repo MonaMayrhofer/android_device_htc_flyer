@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- This file lists Glacier device libraries for applications to link to. -->
-<permissions>
-    <library name="com.htc.hardware.glacier"
-            file="/system/framework/com.htc.hardware.glacier.jar" />
-</permissions>

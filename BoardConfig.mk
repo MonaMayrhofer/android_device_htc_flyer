@@ -1,17 +1,17 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/htc/glacier/BoardConfigVendor.mk
+-include vendor/htc/flyer/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := msm7x30
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_BOARD_PLATFORM := msm8x55
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno205
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 
-TARGET_BOOTLOADER_BOARD_NAME := glacier
+TARGET_BOOTLOADER_BOARD_NAME := flyer
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
@@ -43,7 +43,7 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
 BOARD_VENDOR_USE_AKMD := akm8975
 
-BOARD_EGL_CFG := device/htc/glacier/egl.cfg
+BOARD_EGL_CFG := device/htc/flyer/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
@@ -54,15 +54,17 @@ BOARD_USE_BROKEN_INJECT_XTRA_HACK := true
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x0087f400
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x19fbfa00   # limited so we enforce room to grow
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x53200200
+#BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x19fbfa00   # limited so we enforce room to grow
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x3ffffe00   # limited so we enforce room to grow
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x53200200
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x1002ffe00
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_USERIMAGES_USE_EXT2 := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/glacier/kernel
+TARGET_PREBUILT_KERNEL := device/htc/flyer/kernel
 
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
